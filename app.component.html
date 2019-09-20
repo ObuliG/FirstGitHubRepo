@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="col-md-12 main-background-column"></div>
+    <div class="main-window main-window-height-correction col-md-12 col-lg-10 mx-auto">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Generate
+                    BOM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" routerLink="/generate-routing" routerLinkActive="active">Generate
+                    Routing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" routerLink="/search" routerLinkActive="active">Search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" routerLink="/upload" routerLinkActive="active">Upload</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane container active" id="GenerateBOM">
+                <router-outlet #routerOutlet="outlet"></router-outlet>
+            </div>
+
+        </div>        
+    </div>
+<app-footer></app-footer>
